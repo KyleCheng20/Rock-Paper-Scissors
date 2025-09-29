@@ -2,7 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice(){
-    let randomChoice = Math.floor(Math.random() * 3);
+    let randomChoice = Math.floor(Math.random() * 3);       //Random integer from 0-2
 
     if(randomChoice === 0){
         return "Rock";
@@ -19,9 +19,6 @@ function getHumanChoice(){
     let choice = prompt("Enter your choice (Rock, Paper, or Scissors):");
     return choice;
 }
-
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
 
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toUpperCase();
@@ -67,3 +64,26 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
+function playGame(){
+
+    //Play for 5 rounds
+    for(let i = 1; i <= 5; i++){
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice);
+        console.log(`Round: ${i}`);
+        console.log(`Scores: Human - ${humanScore} | Computer - ${computerScore}`)
+    }
+    console.log(`Final Score: Human - ${humanScore} | Computer - ${computerScore}`);
+    if(humanScore === computerScore){
+        alert("Tie game!");
+    }
+    else if(humanScore > computerScore){
+        alert("You win the game!");
+    }
+    else{
+        alert("You lost the game!")
+    }
+}
+
+playGame();
