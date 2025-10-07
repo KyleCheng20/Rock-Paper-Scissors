@@ -82,8 +82,21 @@ function playRound(humanChoice, computerChoice){
         rockBtn.hidden = true;
         paperBtn.hidden = true;
         scissorsBtn.hidden = true;
-
         resetBtn.hidden = false;
+
+        resetBtn.addEventListener("click", () => {
+            humanScore = 0;
+            computerScore = 0;
+
+            humanScoreDisplay.textContent = humanScore;
+            computerScoreDisplay.textContent = computerScore;
+            msg.textContent = "";
+
+            rockBtn.hidden = false;
+            paperBtn.hidden = false;
+            scissorsBtn.hidden = false;
+            resetBtn.hidden = true;
+        });
     }
 }
 
@@ -104,4 +117,4 @@ buttonContainer.addEventListener("click", (event) => {
             playRound("SCISSORS", getComputerChoice());
             break;
     }
-})
+});
