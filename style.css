@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: outfit, roboto;
+  font-family: "outfit", "roboto", sans-serif;
 }
 
 .content{
@@ -40,20 +40,22 @@ p{
 }
 
 .content-container{
+  width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #3e71a3;
   border-radius: 10px;
-  padding: 15px;
+  padding: 16px;
   margin: 25px;
 }
 
 .score-container{
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 80px;
+  padding-top: 10px;
 }
 
 .human-score-container, .computer-score-container{
@@ -68,6 +70,9 @@ span{
   border-radius: 5px;
   padding: 15px;
   font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  width: 50px;
 }
 
 .button-container{
@@ -87,8 +92,16 @@ button{
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
+  transition: all 0.2s ease;
+}
+
+#rock, #paper, #scissors{
+  width: 120px;
 }
 
 button:hover{
   cursor: pointer;
+  background-color: #16314d;
+  color: #dce9f5;
+  transform: scale(1.10);
 }
