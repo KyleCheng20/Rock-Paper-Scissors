@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #16314d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: outfit, roboto;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, p{
+  color: #fff;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+p{
+  font-size: 21px;
+}
+
+.content-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e71a3;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 25px;
+}
+
+.score-container{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.human-score-container, .computer-score-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+span{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 24px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+button{
+  background-color: #dce9f5;
+  color: #16314d;
+  font-size: 20px;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+button:hover{
+  cursor: pointer;
+}
